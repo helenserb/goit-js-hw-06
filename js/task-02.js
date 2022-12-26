@@ -12,3 +12,13 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+const list = document.getElementById("ingredients");
+
+const ingredientEl = ingredients.map((item) => {
+  const liEl = document.createElement("li");
+  liEl.textContent = item;
+  liEl.classList.add("item");
+  return liEl;
+});
+
+list.append(...ingredientEl);

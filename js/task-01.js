@@ -15,3 +15,15 @@
 // Category: Technologies
 // Elements: 5
 
+const categories = document.getElementsByClassName("item")
+const numberOfCategories = categories.length;
+console.log("Number of categories:", numberOfCategories);
+
+for (const category of categories) {
+    const nameOfCategory = category.firstElementChild.textContent;
+    console.log("Category:", nameOfCategory);
+
+    const numberOfElements = category.querySelectorAll("li").length;
+    console.log("Elements:", numberOfElements);  
+}
+
